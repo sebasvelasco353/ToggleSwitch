@@ -1,6 +1,8 @@
 body{
     margin: 0%;
     padding: 0%;
+    background: #FFF;
+
 }
 input{
     display: none;
@@ -22,32 +24,32 @@ input{
     width: 180px;
     height: 70px;
 }
-.inner{
-    border-radius: 40px;
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #B79891;
-    transition: 0.2s;
+.background{
+  border-radius: 40px;
+  position: absolute;
+  width: 170px;
+  height: 60px;
+  z-index: 1;
+  top: 5px;
+  left: 5px;
+  background-image: linear-gradient(to right, #ff4e50, #de4848);
+  border: solid 3px #F7CE5A;
 }
-.inner:before{
+.background:before{
  position: absolute;
  content: "";
- width: 70px;
- height: 60px;
+ width: 55px;
+ height: 45px;
  left: 6px;
  border-radius: 40px;
- bottom: 5px;
+ bottom: 8px;
  background: #fff;
  transition-timing-function: ease-in-out;
  transition-duration: .7s;
 }
-input:checked + .inner{
-    background: #94716B;
+input:checked + .background{
+    background-image: linear-gradient(to right, #7bcf87, #84d67e, #8fde73, #9ee466, #aeea57);
 }
-input:checked + .inner:before{
-    transform: translateX(95px);
+input:checked + .background:before{
+    transform: translateX(103px);
 }
