@@ -2,13 +2,13 @@ body{
     margin: 0%;
     padding: 0%;
     background: #FFF;
-
+    font-family: 'Open Sans', sans-serif;
+    color: #FFF;
 }
 input{
     display: none;
 }
 #container{
-    padding-top: 25vh;
     align-content: center;
     align-items: center;
     display: grid;
@@ -16,6 +16,10 @@ input{
     grid-template-areas: ". toggle .";
 }
 #switcher{
+    align-self: center;
+    padding-top: 25vh;
+    margin-top: 50%;
+    margin-left: 25%;
     grid-area: toggle;
 }
 .switcherLabel{
@@ -34,6 +38,16 @@ input{
   left: 5px;
   background-image: linear-gradient(to right, #ff4e50, #de4848);
   border: solid 3px #F7CE5A;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, .1);
+}
+.state{
+  padding-top: 3px;
+  padding-left: 90px;
+/*   transition-timing-function: ease-in-out; */
+  transition-duration: .7s;
+}
+input + .background .state:after{
+  content: 'OFF';
 }
 .background:before{
  position: absolute;
@@ -46,9 +60,17 @@ input{
  background: #fff;
  transition-timing-function: ease-in-out;
  transition-duration: .7s;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, .1);
 }
 input:checked + .background{
     background-image: linear-gradient(to right, #7bcf87, #84d67e, #8fde73, #9ee466, #aeea57);
+}
+input:checked + .background .state{
+    padding-left: 45px;
+}
+input:checked + .background .state:after{
+    padding-left: 5px;
+    content: 'ON';
 }
 input:checked + .background:before{
     transform: translateX(103px);
