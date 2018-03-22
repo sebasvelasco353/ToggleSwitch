@@ -1,0 +1,51 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+input{
+    display: none;
+}
+#container{
+    padding-top: 25vh;
+    align-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: ". toggle .";
+}
+#switcher{
+    grid-area: toggle;
+}
+.switcherLabel{
+    display: inline-block;
+    position: relative;
+    width: 180px;
+    height: 70px;
+}
+.inner{
+    border-radius: 20px;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: indianred;
+    transition: 0.2s;
+}
+.inner:before{
+ position: absolute;
+ content: "";
+ width: 70px;
+ height: 60px;
+ left: 6px;
+ border-radius: 20px;
+ bottom: 4px;
+ background: #fff;
+}
+input:checked + .inner{
+    background: greenyellow;
+}
+input:checked + .inner:before{
+    transform: translateX(95px);
+}
