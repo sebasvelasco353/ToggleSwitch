@@ -20,7 +20,6 @@ input{
     padding-top: 25vh;
     margin-top: 50%;
     margin-left: 25%;
-    cursor: pointer;
     grid-area: toggle;
 }
 .switcherLabel{
@@ -45,7 +44,6 @@ input{
 .state{
   padding-top: 3px;
   padding-left: 90px;
-/*   transition-timing-function: ease-in-out; */
   transition-duration: .7s;
 }
 input + .background .state:after{
