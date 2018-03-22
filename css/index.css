@@ -23,14 +23,14 @@ input{
     height: 70px;
 }
 .inner{
-    border-radius: 20px;
+    border-radius: 40px;
     position: absolute;
     cursor: pointer;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: indianred;
+    background-color: #B79891;
     transition: 0.2s;
 }
 .inner:before{
@@ -39,12 +39,14 @@ input{
  width: 70px;
  height: 60px;
  left: 6px;
- border-radius: 20px;
- bottom: 4px;
+ border-radius: 40px;
+ bottom: 5px;
  background: #fff;
+ transition-timing-function: ease-in-out;
+ transition-duration: .7s;
 }
 input:checked + .inner{
-    background: greenyellow;
+    background: #94716B;
 }
 input:checked + .inner:before{
     transform: translateX(95px);
